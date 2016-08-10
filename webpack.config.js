@@ -15,19 +15,12 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: /node_modules/,
         loader: 'style!css'
+      },
+      {
+        test: /\.ttf$/,
+        loader: 'url'
       }
     ]
-  },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      },
-      output: {
-        comments: false
-      }
-    })
-  ]
+  }
 };

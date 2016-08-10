@@ -1,5 +1,6 @@
 import cats from './cats.js';
 
+import '../style/fonts/index.css';
 import '../style/index.css';
 
 const catsContainer = document.createElement('div');
