@@ -1,0 +1,28 @@
+{
+  "name": "webpack-example-app",
+  "version": "0.0.1",
+  "description": "Simple example app in order to better understand how webpack works",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lacerda/webpack-example-app.git"
+  },
+  "keywords": [
+    "webpack",
+    "learn",
+    "example"
+  ],
+  "author": "Filipa Lacerda <lacerda.filipa@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lacerda/webpack-example-app/issues"
+  },
+  "homepage": "https://github.com/Lacerda/webpack-example-app#readme",
+  "devDependencies": {
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
