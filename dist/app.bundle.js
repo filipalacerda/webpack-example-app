@@ -44,17 +44,59 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	cats = __webpack_require__(1);
-	console.log(cats);
+	'use strict';
 
+	var _cats = __webpack_require__(1);
+
+	var _cats2 = _interopRequireDefault(_cats);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	(function () {
+	  var catsContainer = document.createElement('div');
+	  var catsList = document.createElement('ul');
+
+	  catsContainer.appendChild(catsList);
+
+	  var _iteratorNormalCompletion = true;
+	  var _didIteratorError = false;
+	  var _iteratorError = undefined;
+
+	  try {
+	    for (var _iterator = _cats2.default[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	      var cat = _step.value;
+
+	      var li = document.createElement('li');
+	      var text = document.createTextNode('' + cat);
+	      li.appendChild(text);
+	      catsList.appendChild(li);
+	    }
+	  } catch (err) {
+	    _didIteratorError = true;
+	    _iteratorError = err;
+	  } finally {
+	    try {
+	      if (!_iteratorNormalCompletion && _iterator.return) {
+	        _iterator.return();
+	      }
+	    } finally {
+	      if (_didIteratorError) {
+	        throw _iteratorError;
+	      }
+	    }
+	  }
+
+	  document.body.appendChild(catsContainer);
+	})();
 
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
 
+	'use strict';
+
 	var cats = ['sina', 'ruby'];
 	module.exports = cats;
-
 
 /***/ }
 /******/ ]);
