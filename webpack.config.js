@@ -7,11 +7,18 @@ module.exports = {
     filename: 'app.bundle.js'
   },
   module: {
-    loaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'babel-loader'
-    }]
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel'
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loader: 'style!css'
+      }
+    ]
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({

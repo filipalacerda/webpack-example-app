@@ -1,5 +1,7 @@
 import cats from './cats.js';
 
+import '../style/index.css';
+
 (function(){
   const catsContainer = document.createElement('div');
   const catsList = document.createElement('ul');
