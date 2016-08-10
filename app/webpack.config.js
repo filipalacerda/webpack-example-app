@@ -1,4 +1,5 @@
-const webpack = require('webpack');
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/app.js',
@@ -22,5 +23,11 @@ module.exports = {
         loader: 'url'
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Webpack example app',
+      template: './index.html'
+    })
+  ]
 };
