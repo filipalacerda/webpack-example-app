@@ -1,7 +1,6 @@
-import cats from './cats.js';
+require('../style/index.css');
 
-import '../style/fonts/index.css';
-import '../style/index.css';
+import cats from './cats.js';
 
 const catsContainer = document.createElement('div');
 const catsList = document.createElement('ul');

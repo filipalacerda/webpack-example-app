@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: './src/app.js',
@@ -16,7 +17,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style!css'
+        loader: ExtractTextPlugin.extract("style", "css")
       },
       {
         test: /\.ttf$/,
@@ -28,6 +29,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Webpack example app',
       template: './index.html'
-    })
+    }),
+    new ExtractTextPlugin("style.css")
   ]
 };
