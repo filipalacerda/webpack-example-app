@@ -46,13 +46,13 @@
 
 	'use strict';
 
-	var _cats = __webpack_require__(1);
+	__webpack_require__(1);
+
+	var _cats = __webpack_require__(7);
 
 	var _cats2 = _interopRequireDefault(_cats);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	__webpack_require__(2);
 
 	var catsContainer = document.createElement('div');
 	var catsList = document.createElement('ul');
@@ -93,16 +93,21 @@
 /* 1 */
 /***/ function(module, exports) {
 
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */
+/***/ function(module, exports) {
+
 	'use strict';
 
 	var cats = ['sina', 'ruby'];
 	module.exports = cats;
-
-/***/ },
-/* 2 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);

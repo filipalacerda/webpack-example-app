@@ -10,25 +10,16 @@ module.exports = {
   },
   module: {
     loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel'
-      },
-      {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style", "css")
-      },
-      {
-        test: /\.ttf$/,
-        loader: 'url'
-      }
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
+      { test: /\.css$/, loader: ExtractTextPlugin.extract("style", "css") },
+      { test: /\.ttf$/, loader: 'url' }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Webpack example app',
-      template: './index.html'
+      template: './index.html',
+      inject: false
     }),
     new ExtractTextPlugin("style.css")
   ]

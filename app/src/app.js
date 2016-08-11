@@ -1,5 +1,4 @@
-require('../style/index.css');
-
+import '../style/index.css';
 import cats from './cats.js';
 
 const catsContainer = document.createElement('div');
