@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/app.js',
@@ -11,16 +11,22 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract("style", "css") },
+      { test: /\.css$/, loader: "style!css" },
       { test: /\.ttf$/, loader: 'url' }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Webpack example app',
-      template: './webpack-templates/prod.html',
+      template: './webpack-templates/dev.html',
       inject: false
     }),
-    new ExtractTextPlugin("style.css")
-  ]
+    new CopyWebpackPlugin([
+      { from : "../ext/", to: "./ext/" }
+    ])
+  ],
+  devServer: {
+    hot: true,
+    colors: true
+  }
 };
